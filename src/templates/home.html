@@ -1,14 +1,10 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8" />
-        <title>Hello, Flask</title>
-    </head>
-    <body>
-        {%if name %}
-            <strong>Hello there, {{ name }}!</strong> It's {{ date.strftime("%A, %d %B, %Y at %X") }}.
-        {% else %}
-            What's your name? Provide it after /hello/ in the URL. Ok this is it.
-        {% endif %}
-    </body>
-</html>
+{% extends "base.html" %}
+
+{% block content %}
+<form action="#" method="POST">
+    <p>List of words, comma separated</p>
+    <p><input type="text" name="nm"></p>
+    <p><input type="submit" value="submit"></p>
+
+</form>
+{% endblock %}
