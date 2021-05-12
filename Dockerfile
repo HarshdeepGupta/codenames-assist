@@ -13,7 +13,7 @@ RUN pip install -r requirements.txt
 # Add metadata to the image to describe that the container is listening on port 5000
 EXPOSE 5000
 # copy the content of the local src directory to the working directory
-COPY src/ src
+COPY src/ .
 
 # command to run on container start
-CMD [ "python", "./src/server.py" ]
+CMD [ "python", "./server.py" ]
